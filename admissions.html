@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admissions - B.Ed College</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #800000;
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #800000;
+      margin-top: 30px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      padding: 12px 20px;
+      background-color: #0059b3;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #004080;
+    }
+
+    #inquiry-response {
+      color: green;
+      margin-top: 10px;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .container {
+        margin: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Admissions Open - B.Ed Program</h1>
+    <p>Apply now to become a future educator and leader.</p>
+  </header>
+
+  <div class="container">
+    <h2>Eligibility Criteria</h2>
+    <ul>
+      <li>Candidate must hold a Bachelor's degree with minimum 50% aggregate marks (45% for reserved categories).</li>
+      <li>Graduation must be from a recognized university.</li>
+      <li>Valid entrance exam score (if applicable).</li>
+    </ul>
+
+    <h2>Admission Process</h2>
+    <ul>
+      <li>Step 1: Fill out the inquiry or application form.</li>
+      <li>Step 2: Appear for counseling/interview.</li>
+      <li>Step 3: Document verification and fee submission.</li>
+      <li>Step 4: Final admission confirmation.</li>
+    </ul>
+
+    <h2>Important Dates</h2>
+    <ul>
+      <li>Application Start: May 15, 2025</li>
+      <li>Application Deadline: June 30, 2025</li>
+      <li>Counseling Dates: July 10–15, 2025</li>
+      <li>Course Begins: August 1, 2025</li>
+    </ul>
+
+    <h2>Quick Inquiry Form</h2>
+    <form id="inquiry-form">
+      <div class="form-group">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" required />
+      </div>
+      <div class="form-group">
+        <label for="message">Message or Query</label>
+        <textarea id="message" rows="4"></textarea>
+      </div>
+      <button type="submit">Submit Inquiry</button>
+      <p id="inquiry-response"></p>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 B.Ed College | NAAC Accredited | All rights reserved
+  </footer>
+
+  <script>
+    const form = document.getElementById("inquiry-form");
+    const response = document.getElementById("inquiry-response");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      response.textContent = "Thank you! We will contact you shortly.";
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>
