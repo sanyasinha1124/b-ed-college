@@ -1,60 +1,125 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>College Programs</title>
-</head>
-<body style="margin:0; padding:0; background-color:#f4f4f4;">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Programs - B.Ed College</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #f4f6f8;
+      color: #333;
+    }
 
-  <div style="background-color:#f7f7f7(128, 128, 128, 0.326); padding:40px; font-family:'Segoe UI', sans-serif; max-width:900px; margin:40px auto; border-radius:12px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
-    <h2 style="text-align:center; color:#cd0707; margin-bottom:30px;">Academic Programs</h2>
+    header {
+      background-color: #800000;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .program-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.08);
+      padding: 25px;
+      margin-bottom: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    .program-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .program-title {
+      color: #800000;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .program-info {
+      margin-bottom: 12px;
+    }
+
+    .program-info strong {
+      display: inline-block;
+      width: 120px;
+    }
+
+    footer {
+      background-color: #800000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .container {
+        padding: 15px;
+      }
+
+      .program-info strong {
+        width: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Our Programs</h1>
+    <p>Explore the academic programs we offer in education</p>
+  </header>
+
+  <div class="container">
 
     <!-- B.Ed Program -->
-    <div style="margin-bottom:30px;">
-      <h3 style="color:#cd0707;">Bachelor of Education (B.Ed)</h3>
-      <p style="color:#333;"><strong>Duration:</strong> 2 Years</p>
-      <p style="color:#333;"><strong>Eligibility:</strong> Graduation with at least 50%</p>
-      <button onclick="toggleDetails('bed-details')" style="background-color:#cd0707; color:white; padding:6px 12px; border:none; border-radius:5px; cursor:pointer;">Learn More</button>
-      <div id="bed-details" style="display:none; margin-top:15px; color:#333; line-height:1.6;">
-        <p><strong>Objectives:</strong> To equip future educators with teaching strategies, classroom management, and inclusive education practices. The course blends theoretical foundations with school-based internships.</p>
-        <p><strong>Key Modules:</strong> Childhood and Growing Up, Pedagogy of a School Subject, Assessment for Learning, Drama and Art in Education.</p>
-        <p><strong>Career Prospects:</strong> Secondary School Teacher, Special Educator, Instructional Designer, or pursue M.Ed for advanced roles.</p>
-      </div>
+    <div class="program-card">
+      <div class="program-title">Bachelor of Education (B.Ed)</div>
+      <div class="program-info"><strong>Duration:</strong> 2 Years (Full-Time)</div>
+      <div class="program-info"><strong>Eligibility:</strong> Graduate with minimum 50% (45% for reserved)</div>
+      <div class="program-info"><strong>Curriculum:</strong> Educational psychology, pedagogy, internship, ICT in education</div>
     </div>
 
     <!-- M.Ed Program -->
-    <div style="margin-bottom:30px;">
-      <h3 style="color:#cd0707;">Master of Education (M.Ed)</h3>
-      <p style="color:#333;"><strong>Duration:</strong> 2 Years</p>
-      <p style="color:#333;"><strong>Eligibility:</strong> B.Ed with at least 55%</p>
-      <button onclick="toggleDetails('med-details')" style="background-color:#cd0707; color:white; padding:6px 12px; border:none; border-radius:5px; cursor:pointer;">Learn More</button>
-      <div id="med-details" style="display:none; margin-top:15px; color:#333; line-height:1.6;">
-        <p><strong>Objectives:</strong> Designed for those who want to take leadership roles in education or contribute to academic research and teacher training.</p>
-        <p><strong>Key Modules:</strong> Educational Planning & Policy, Educational Technology, Research Methods, Inclusive Education.</p>
-        <p><strong>Career Prospects:</strong> Teacher Educator, Curriculum Developer, Principal, Educational Researcher.</p>
-      </div>
+    <div class="program-card">
+      <div class="program-title">Master of Education (M.Ed)</div>
+      <div class="program-info"><strong>Duration:</strong> 2 Years (Full-Time)</div>
+      <div class="program-info"><strong>Eligibility:</strong> B.Ed or equivalent degree with minimum 55%</div>
+      <div class="program-info"><strong>Curriculum:</strong> Research methods, advanced pedagogy, dissertation, leadership in education</div>
     </div>
 
-    <!-- Ph.D Program -->
-    <div style="margin-bottom:10px;">
-      <h3 style="color:#cd0707;">Ph.D. in Education</h3>
-      <p style="color:#333;"><strong>Duration:</strong> 3 to 6 Years</p>
-      <p style="color:#333;"><strong>Eligibility:</strong> M.Ed or Equivalent with 55%</p>
-      <button onclick="toggleDetails('phd-details')" style="background-color:#cd0707; color:white; padding:6px 12px; border:none; border-radius:5px; cursor:pointer;">Learn More</button>
-      <div id="phd-details" style="display:none; margin-top:15px; color:#333; line-height:1.6;">
-        <p><strong>Objectives:</strong> To nurture scholars capable of producing original research that contributes to national and global educational discourse. Emphasis is placed on policy, pedagogy, and social change.</p>
-        <p><strong>Research Areas:</strong> Curriculum Design, Education Policy, Educational Psychology, Teacher Training, Digital Learning.</p>
-        <p><strong>Career Prospects:</strong> University Professor, Research Consultant, Policy Advisor, or Educational Think Tank Analyst.</p>
-      </div>
+    <!-- Ph.D. in Education -->
+    <div class="program-card">
+      <div class="program-title">Ph.D. in Education</div>
+      <div class="program-info"><strong>Duration:</strong> Minimum 3 Years</div>
+      <div class="program-info"><strong>Eligibility:</strong> M.Ed with 55% or NET/JRF qualified</div>
+      <div class="program-info"><strong>Curriculum:</strong> Doctoral research, thesis work, seminars, advanced theory in education</div>
     </div>
+
   </div>
 
-  <!-- Toggle Script -->
-  <script>
-    function toggleDetails(id) {
-      var section = document.getElementById(id);
-      section.style.display = (section.style.display === 'none' || section.style.display === '') ? 'block' : 'none';
-    }
-  </script>
+  <footer>
+    &copy; 2025 B.Ed College | NAAC Accredited | All rights reserved
+  </footer>
 
 </body>
 </html>
